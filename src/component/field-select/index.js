@@ -20,11 +20,13 @@ class FieldSelect {
     const parent = target.parentElement.parentElement
     const list = target.parentElement
 
+    // ===
+
     const active = list.querySelector('*[active]')
 
     if (active) active.toggleAttribute('active')
 
-    //===
+    // ===
 
     target.toggleAttribute('active')
 
