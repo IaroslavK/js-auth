@@ -14,7 +14,7 @@ router.get('/', function (req, res) {
     component: [],
 
     // вказуємо назву сторінки
-    title: 'Imdex page',
+    title: 'Index page',
     // ... сюди можна далі продовжувати додавати потрібні технічні дані, які будуть використовуватися в layout
 
     // вказуємо дані,
@@ -68,9 +68,11 @@ router.get('/logout', function (req, res) {
 // Підключіть файли роутів
 const auth = require('./auth')
 // Підключіть інші файли роутів, якщо є
+const user = require('./user')
 
 // Об'єднайте файли роутів за потреби
 router.use('/', auth)
+router.use('/', user)
 // Використовуйте інші файли роутів, якщо є
 
 // Експортуємо глобальний роутер
